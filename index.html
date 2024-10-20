@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada Jurídica 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            background-color: #004080;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #004080;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jornada Jurídica 2024</h1>
+        <h2>IV A Turno Nocturno - Derecho y Ciencias Políticas</h2>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('inicio')">Inicio</a></li>
+                <li><a href="#" onclick="showSection('cronograma')">Cronograma</a></li>
+                <li><a href="#" onclick="showSection('ponentes')">Ponentes</a></li>
+                <li><a href="#" onclick="showSection('contacto')">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Inicio -->
+    <section id="inicio">
+        <h2>Bienvenidos a la Jornada Jurídica 2024</h2>
+        <p>
+            Del 28 de octubre al 1 de noviembre de 2024, se llevará a cabo la Jornada Jurídica organizada por los estudiantes de IV A Turno Nocturno de Derecho y Ciencias Políticas. Un evento que promete traer ponencias sobre los temas más importantes y actuales en el ámbito del derecho y las ciencias políticas.
+        </p>
+        <p>
+            Acompáñanos durante esta semana de aprendizaje e intercambio de conocimientos.
+        </p>
+        <a href="#" class="btn" onclick="showSection('cronograma')">Ver Cronograma</a>
+    </section>
+
+    <!-- Sección de Cronograma -->
+    <section id="cronograma" class="hidden">
+        <h2>Cronograma del Evento</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Actividad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>28 de octubre</td>
+                    <td>18:00 - 21:00</td>
+                    <td>Inauguración y Primera Ponencia</td>
+                </tr>
+                <tr>
+                    <td>Martes</td>
+                    <td>29 de octubre</td>
+                    <td>18:00 - 21:00</td>
+                    <td>Segunda Ponencia</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>30 de octubre</td>
+                    <td>18:00 - 21:00</td>
+                    <td>Tercera Ponencia</td>
+                </tr>
+                <tr>
+                    <td>Jueves</td>
+                    <td>31 de octubre</td>
+                    <td>18:00 - 21:00</td>
+                    <td>Cuarta Ponencia</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>1 de noviembre</td>
+                    <td>18:00 - 21:00</td>
+                    <td>Clausura y Evento de Cierre</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Sección de Ponentes -->
+    <section id="ponentes" class="hidden">
+        <h2>Ponentes</h2>
+        <article>
+            <h3>Dr. Juan Pérez</h3>
+            <p>Experto en Derecho Constitucional con más de 20 años de experiencia. Actualmente es profesor titular en la Universidad de Derecho de Madrid.</p>
+        </article>
+
+        <article>
+            <h3>Lic. María Gómez</h3>
+            <p>Abogada penalista y defensora de los derechos humanos. Ha trabajado en casos de impacto internacional en Latinoamérica.</p>
+        </article>
+
+        <article>
+            <h3>Dr. José Martínez</h3>
+            <p>Académico y consultor en Derecho Internacional. Ha sido ponente en múltiples congresos jurídicos a nivel mundial.</p>
+        </article>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="hidden">
+        <h2>Contacto</h2>
+        <form action="enviar_contacto.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jornada Jurídica - IV A Derecho y Ciencias Políticas</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.add('hidden');
+            });
+
+            // Mostrar la sección seleccionada
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.remove('hidden');
+            }
+        }
+
+        // Mostrar la sección de inicio al cargar la página
+        showSection('inicio');
+    </script>
+
+</body>
+</html>
